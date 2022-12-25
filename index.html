@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>wa</title>
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap" rel="stylesheet">
+
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+
+		<script src="util.js"></script>
+		<script src="config.js"></script>
+	</head>
+	<body>
+		<h1>Pixel Art Maker</h1>
+		<div class="secondary">Upload your image to make easy pixel art!</div>
+
+		<div class="ui">
+			<strong>Configuration</strong>
+			<label>
+				<strong>Filter Type</strong>
+				<select class="type">
+					<option value="COLOR">None</option>
+					<!--  -->
+					<option value="CLOLR">Limited Color</option>
+					<option value="GRAYS">Grayscale</option>
+					<!--  -->
+					<option value="MOODY">Depressed Grayscale</option>
+					<option value="RED">Red only</option>
+					<option value="GREEN">Green only</option>
+					<option value="BLUE">Blue only</option>
+				</select>
+			</label>
+
+			<label>
+				<strong>Pixel Size</strong>
+				<input type="number" class="detail" value="25">
+			</label>
+
+			<label class="if-moody">
+				<strong>Color Tiers</strong>
+				<input type="number" class="cold" value="20" max="255">
+			</label>
+		</div>
+		
+		<label class="fileinput">
+			<strong>Upload Image!</strong>
+			<div class="filecont"></div>
+		</label>
+
+		<div class="canvas"></div>
+
+		<div class="after-gen">
+			<button class="refresh-canvas">Image not showing?</button>
+			<button class="save-canvas">Save Image</button>
+		</div>
+
+		<div class="tutorial">
+			<h1>Tutorial</h1>
+			<div class="bottom">The <strong>Filter Type</strong> allows you to configure the generation of the colors. By default this is none, but you can play around with the different affects available!</div>
+			<div class="bottom">The <strong>Pixel Size</strong> is the size of each pixel in the picture. Don't set this too low, or else it gets exponentially longer to process! Generally, keep it above 10.</div
+			<div class="bottom">For best results, have your image be <strong>400 &times; 400</strong> or at least a square.</div>
+			<div class="bottom"><strong>THIS PROJECT IS OPEN SOURCE ON GITHUB</strong></div>
+		</div>
+
+		<script src="ui.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
